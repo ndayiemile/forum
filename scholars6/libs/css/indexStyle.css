@@ -1,0 +1,219 @@
+:root {
+    --main-color: coral;
+    --secondary-color: rgb(37, 37, 87);
+    --other-color: cornflowerblue;
+    --white-color: white;
+    --standard-transition: 0.3s ease-in-out;
+    --standard-shadow: 0 0 5px lightgray;
+    --standard-post-shadow: 1px 1px 5px lightgray;
+    --standard-background-color: #ECF0F1;
+}
+
+
+/* body */
+
+body {
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    ;
+    color: var(--secondary-color);
+    scroll-behavior: smooth;
+    background-color: var(--standard-background-color);
+    font-size: 16px;
+    line-height: 1.5;
+    /* color:#545454; */
+}
+
+
+/* header */
+
+.header-div {
+    width: 100%;
+    height: 278px;
+    background-image: url("../../dipository/img/header_backgrounds/computer.jpg");
+    background-size: cover;
+    background-color: var(--other-color);
+    background-blend-mode: multiply;
+}
+
+nav .nav-item {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+nav .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    padding-top: 5px;
+    padding-right: 4px;
+}
+
+.search_input {
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 150px;
+    transition: width 0.4s linear;
+}
+
+.search_icon {
+    background: cornflowerblue;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* new topic */
+
+.new-topic {
+    display: none;
+    grid-template-columns: 10% 90%;
+    justify-content: center;
+    background-color: var(--white-color);
+    transition: var(--standard-transition);
+}
+
+.new-topic form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-topic-col2 form input,
+.new-topic-col2 form select,
+.new-topic-col2 form textarea {
+    padding: 2vh;
+    margin-top: 2vh;
+}
+
+.new-topic-col2 form label {
+    opacity: 0.7;
+}
+
+.new-topic-col2 form button {
+    background-color: var(--other-color);
+    color: var(--white-color);
+    font-weight: bolder;
+    transition: 0.3s var(--standard-transition);
+    border: none;
+}
+
+.new-topic-col2 form button {
+    margin: 2vh;
+}
+
+.new-topic {
+    padding: 2vh;
+    box-shadow: var(--standard-shadow);
+}
+
+
+/* POST  */
+
+.post {
+    box-shadow: var(--standard-post-shadow);
+}
+
+.post-form {
+    position: relative;
+}
+
+.post-form input[type="submit"] {
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.5;
+    transition: 0.5s background ease-in;
+}
+
+.post-form input[type="submit"]:hover {
+    background-color: rgba(100, 148, 237, 0.342);
+    cursor: pointer;
+}
+
+
+/* categories */
+
+.categories h2 {
+    font-size: mediumZZ;
+    border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.categories a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--standard-transition);
+    opacity: 0.7;
+}
+
+.categories a:hover {
+    text-decoration: 1px solid var(--secondary-color) underline;
+    opacity: 1;
+}
+
+
+/* pagination */
+
+.pagination button {
+    color: var(--white-color);
+    background-color: var(--other-color);
+    padding: 0.5vh 1vh;
+    border: 10px;
+    margin: 0px 5px;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    opacity: 1;
+}
+
+
+/* footer */
+
+
+/* media queries */
+
+@media screen and (max-width:577px) {
+    nav .nav-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width:577px) {
+    nav .nav-home-dropdown {
+        width: fit-content;
+        margin-left: -60px !important;
+    }
+}

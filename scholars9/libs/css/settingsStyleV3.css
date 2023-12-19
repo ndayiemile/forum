@@ -1,0 +1,13 @@
+.profile-picture {
+    /* max-width: 50; */
+}
+
+.user-details {
+    display: relative;
+    background-color: black;
+}
+
+.user-details div {
+    margin-top: auto;
+    margin-bottom: auto;
+}

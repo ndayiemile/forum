@@ -1,0 +1,449 @@
+:root {
+  --main-color: coral;
+  --secondary-color: rgb(37, 37, 87);
+  --other-color: cornflowerblue;
+  --white-color: white;
+	--standard-transition: 0.3s ease-in-out;
+  --standard-shadow:0 0 5px lightgray;
+
+  --standard-background-color: #ECF0F1;
+}
+
+
+body {
+  margin: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  color: var(--secondary-color);
+  scroll-behavior: smooth;
+  background-color: var(--standard-background-color);
+  font-size:16px;
+  line-height:1.5;
+  /* color:#545454; */
+}
+
+/* Header */
+
+.header {
+	width: 100%;	
+	height: 278px;
+	background-image: url(../../images/backgrounds/computer.jpg);
+	background-size: cover;
+	background-color: var(--other-color);
+	background-blend-mode: multiply;
+}
+
+/* Navigation bar */
+
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background-color: #fff;
+	margin-top: 20px;
+	box-shadow:0 0 5px lightgray;
+	height: 50px;
+	align-items: center;
+}
+
+nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: var(--white-color);
+  z-index: 1;
+}
+
+.nav-bar form input,
+.nav-bar button,
+.new-topic-col2 form button {
+	padding: 2vh 3vh;
+	border-radius: 3px;
+}
+
+
+.nav-bar button,
+.new-topic-col2 form button {
+	background-color: var(--other-color);
+	color: var(--white-color);
+	font-weight: bolder;
+	transition: 0.3s var(--standard-transition);
+	border: none;
+}
+
+.nav-bar button:hover,
+.new-topic-col2 form button:hover {
+	background-color: var(--secondary-color);
+	transition: var(--standard-transition);
+	cursor: pointer;
+}
+
+.search-field input {
+  outline: none;
+  border: none;
+}
+
+.search-field {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.search-field button {
+  background-color: gray;
+}
+
+.open-nav {
+	width: 27px;
+	height: 20px;
+	margin: 14px;
+	transition: 0.2s ease;
+}
+
+.open-nav:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+.open-nav div {
+	width: 100%;
+	height: 4px;
+	margin-bottom: 3px;
+	background-color: var(--other-color);
+}
+
+.logo {
+	font-weight: bolder;
+	color: var(--secondary-color);
+}
+
+.logo:hover {
+	color: var(--other-color);	
+	transition: var(--standard-transition);
+}
+
+@media (max-width: 550px) {
+  .search-field {
+    display: none;
+  }
+
+}
+
+/* Main */
+
+.main {
+  margin-top: 4vh;
+  margin-right: 10vh;
+  margin-left: 10vh;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  justify-content: space-around;
+}
+/* 
+.main .col {
+  border: 1px solid lightgray;
+} */
+
+.new-topic {
+  display: none;
+  grid-template-columns: 10% 90%;
+  justify-content: center;
+  background-color: var(--white-color);
+  transition: var(--standard-transition);
+}
+
+.new-topic form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-topic-col1 {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+.new-topic-col1 img {
+  border-radius: 100%;
+}
+
+.new-topic-col2 form input,
+.new-topic-col2 form select,
+.new-topic-col2 form textarea {
+  padding: 2vh;
+  margin-top: 2vh;
+}
+
+.submission {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-topic-col2 form label {
+  opacity: 0.7;
+}
+
+.new-topic-col2 form button {
+  background-color: var(--other-color);
+	color: var(--white-color);
+	font-weight: bolder;
+	transition: 0.3s var(--standard-transition);
+	border: none;
+}
+
+.new-topic-col2 form button {
+  margin: 2vh;
+}
+
+.new-topic {
+  padding: 2vh;
+	box-shadow: var(--standard-shadow);
+}
+
+.main .col2 {
+  padding: 2vh;
+}
+
+/* Resposive main columns */
+
+@media (max-width: 700px) {
+  .main {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+/* Similar posts */
+
+.similar-posts-div {
+  display: flex;
+  flex-direction: column;
+}
+.similar-posts-rows{
+  position: relative;
+}
+.similar-posts-rows-div {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+.similar-posts-rows-div .similar-posts-col-img {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.similar-posts-rows-div .similar-posts-col-img img {
+  border-radius: 100%;
+}
+
+.similar-posts-rows {
+  box-shadow: var(--standard-shadow);
+  margin-top: 2vh;
+  background-color: var(--white-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.similar-posts-rows-div a {
+  text-decoration: none;
+  z-index: 1000;
+  color: var(--secondary-color);
+}
+
+.similar-posts-rows:hover {
+  background-color: rgba(100, 148, 237, 0.342);
+}
+
+.similar-posts-col-heading:hover {
+  text-decoration: 1px solid underline;
+}
+.similar-posts-rows input[type="submit"]{
+  background: transparent;
+  border:none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  z-index: 100;
+  opacity: 0.5;
+}
+.similar-posts-rows input[type="submit"]:hover{
+  background-color: rgba(100, 148, 237, 0.342);
+}
+/* Commenting area on similar posts */
+
+/* .similar-posts-col-commenting {
+  display: grid;
+  justify-content: left;
+  width: 100%;
+}
+
+.similar-posts-col-commenting form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 2vh 3vh;
+  justify-content: space-around;
+}
+
+.similar-posts-col-commenting form img {
+  border-radius: 100%;
+}
+
+.similar-posts-col-commenting form input {
+	border-radius: 3px;
+  border: none;
+  background-color: var(--standard-background-color);
+  transition: 0.3s ease-in-out;
+}
+
+.similar-posts-col-commenting form input:hover {
+  background-color: lightgray;
+}
+
+.similar-posts-col-commenting form button {
+  background-color: var(--other-color);
+	color: var(--white-color);
+	font-weight: bolder;
+	transition: 0.3s var(--standard-transition);
+	border: none;
+  border-radius: 3px;
+  transition: var(--standard-transition);
+  cursor: pointer;
+}
+
+.similar-posts-col-commenting form button:hover {
+  background-color: var(--secondary-color);
+} */
+
+
+/* Pagination */
+
+.pagination-section {
+  margin-top: 4vh;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.pagination button {
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--other-color);
+  padding: 0.5vh 1vh;
+  border: 10px;
+  margin: 0px 5px;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+  opacity: 1;
+}
+
+/* Categories */
+
+.categories {
+  display: flex;
+  /* grid-template-columns: 100%; */
+  flex-direction: column;
+  background-color: var(--white-color);
+  width: 100%;
+  box-shadow: var(--standard-shadow);
+  padding: 1vh 2vh;
+}
+
+.categories h2 {
+  text-align: center;
+  font-size: medium;
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.categories a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--standard-transition);
+  opacity: 0.7;
+}
+
+.categories a:hover {
+  text-decoration: 1px solid var(--secondary-color)  underline;
+  opacity: 1;
+}
+
+/* Active threads */
+
+.active-threads {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  box-shadow: var(--standard-shadow);
+  margin-top: 2vh;
+  width: 100%;
+  padding: 1vh 2vh;
+}
+
+.active-threads h2 {
+  text-align: center;
+  font-size: mediumZZ;
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.active-threads-list-sub-div a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  opacity: 0.7;
+  transition: var(--standard-transition);
+}
+
+.active-threads-list-sub-div a:hover {
+  text-decoration: 1px solid var(--secondary-color)  underline;
+  opacity: 1;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10vh;
+  box-shadow: var(--standard-shadow);
+  background-color: var(--white-color);
+}
+
+.footer div {
+  margin: 0vh 2vh;
+}
+
+.footer div p {
+  color: var(--other-color);
+}
+
+.similar-posts-col-details {
+  opacity: 0.7;
+}
+
+.similar-posts-col-details:hover {
+  opacity: 1;
+}
+
+.commenting {
+  width: 100%;
+  text-align: center;
+  background-color: brown;
+}

@@ -1,0 +1,121 @@
+:root {
+    --main-color: coral;
+    --secondary-color: rgb(37, 37, 87);
+    --other-color: cornflowerblue;
+    --white-color: white;
+    --standard-transition: 0.3s ease-in-out;
+    --standard-shadow: 0 0 5px lightgray;
+    --standard-post-shadow: 1px 1px 5px lightgray;
+    --standard-background-color: #ECF0F1;
+}
+
+
+/* body */
+
+body {
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    ;
+    color: var(--secondary-color);
+    scroll-behavior: smooth;
+    background-color: var(--standard-background-color);
+    font-size: 16px;
+    line-height: 1.5;
+    /* color:#545454; */
+}
+
+
+/* new topic */
+
+.new-topic {
+    display: none;
+    grid-template-columns: 10% 90%;
+    justify-content: center;
+    background-color: var(--white-color);
+    transition: var(--standard-transition);
+}
+
+.new-topic form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-topic-col2 form input,
+.new-topic-col2 form select,
+.new-topic-col2 form textarea {
+    padding: 2vh;
+    margin-top: 2vh;
+}
+
+.new-topic-col2 form label {
+    opacity: 0.7;
+}
+
+.new-topic-col2 form button {
+    background-color: var(--other-color);
+    color: var(--white-color);
+    font-weight: bolder;
+    transition: 0.3s var(--standard-transition);
+    border: none;
+}
+
+.new-topic-col2 form button {
+    margin: 2vh;
+}
+
+.new-topic {
+    padding: 2vh;
+    box-shadow: var(--standard-shadow);
+}
+
+
+/* POST  */
+
+.post {
+    box-shadow: var(--standard-post-shadow);
+}
+
+.post-form {
+    position: relative;
+}
+
+.post-form input[type="submit"] {
+    background: transparent;
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.5;
+    transition: 0.5s background ease-in;
+}
+
+.post-form input[type="submit"]:hover {
+    background-color: rgba(100, 148, 237, 0.342);
+    cursor: pointer;
+}
+
+
+/* categories */
+
+.categories h2 {
+    font-size: mediumZZ;
+    border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.categories a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--standard-transition);
+    opacity: 0.7;
+}
+
+.categories a:hover {
+    text-decoration: 1px solid var(--secondary-color) underline;
+    opacity: 1;
+}
+
+
+/* footer */

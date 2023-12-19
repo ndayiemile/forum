@@ -1,0 +1,21 @@
+.profile_upload_div {
+    position: relative;
+}
+
+.user-profile-image_container:hover #form_profile_picture {
+    visibility: visible;
+}
+
+#form_profile_picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    font-size: small !important;
+}

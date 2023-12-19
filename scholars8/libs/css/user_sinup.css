@@ -1,0 +1,11 @@
+.username_div {
+    position: relative;
+}
+
+.username_status {
+    position: absolute;
+    padding: 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
